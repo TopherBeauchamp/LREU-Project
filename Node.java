@@ -9,8 +9,8 @@ public class Node {
     // Constructor that creates a node with random position
     public Node(int id, int maxWidth, int maxLength) {
         this.id = id;
-        this.x = rand.nextInt(maxWidth);  // random number from 0 to maxWidth-1
-        this.y = rand.nextInt(maxLength); // random number from 0 to maxLength-1
+        this.x = rand.nextInt(maxWidth + 1);  // random number from 0 to maxWidth-1
+        this.y = rand.nextInt(maxLength + 1); // random number from 0 to maxLength-1
     }
     
     public double getDistance(Node other) {
@@ -19,7 +19,13 @@ public class Node {
         return Math.sqrt(dx*dx + dy*dy);  // sqrt((x2-x1)^2 + (y2-y1)^2)
     }
 
+    public int getX(){
+        return x; 
+    }
 
+    public int getY(){
+        return y; 
+    }
     public int getId(){ 
         return id; 
     }
