@@ -86,7 +86,7 @@ public class SensorNetworkRunner {
         }
 
         if(algoChoice == 3){ 
-            System.out.println("Executing Depth First Search:");
+            System.out.println("\nExecuting Depth First Search:");
             for(List<Integer> component : components2){
                 System.out.println("Connected component: " + component);
             }
