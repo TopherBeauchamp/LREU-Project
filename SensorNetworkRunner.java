@@ -55,27 +55,27 @@ public class SensorNetworkRunner {
         List<List<Integer>> components = null;
         List<List<Integer>> components2 = null; 
         if(algoChoice == 1){
-           components = graph.bfs(); 
-        }
-        if(algoChoice == 2){
-            components = graph.dfs(); 
-        }
-        if(algoChoice == 3){
-            components = graph.bfs();
-            components2 = graph.dfs(); 
-        }
-        else{ 
-            System.out.println("Pick a valid number next time!!!");
-            System.exit(0);
-        }
+            components = graph.bfs(); 
+         }
+         else if(algoChoice == 2){
+             components = graph.dfs(); 
+         }
+         else if(algoChoice == 3){
+             components = graph.bfs();
+             components2 = graph.dfs(); 
+         }
+         else{ 
+             System.out.println("Pick a valid number next time!!!");
+             System.exit(0);
+         }
 
        
 
         if(components.size() > 1){ 
-            System.out.println("Graph is not connected");
+            System.out.println("\nGraph is not connected");
         }
         else{ 
-            System.out.println("Graph is connected");
+            System.out.println("\nGraph is connected");
         }
 
         if(algoChoice == 1 || algoChoice == 3) {System.out.println("\nExecuting Breadth First Search:");}
